@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="userStyle.css"> <!-- Linking to external CSS file -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+  
+  <!-- Google Font Link for Calendar Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<header>
+  <span id="signedInAs">Signed In As: User</span>
+  <span id="signOut">Sign Out</span>
+</header>
+
+<top-left></top-left>
+  
+<body>
+  
+  <h1>Dashboard</h1>
+
+  <div id="sidebar">
+    <ul>
+      <li><a href="Patients/Patients.html" id="Patients">Patients</a></li>
+      <li><a href="Appointments/Appointments.html" id="Appointments">Appointments</a></li>
+      <li><a href="MedPersc/MedPersc.html" id="MedPersc">Medical Records & Prescriptions</a></li>
+      <li><a href="Settings/Settings.html" id="Settings">Settings</a></li>
+      <!-- <li><a href="../index.html" id="Signout">Sign Out</li> -->
+    </ul>
+  </div>
+
+  <div id="content">
+    <div id="dashboard-section">
+      <!-- Analytics sections -->
+      <div id="daily-task-section">
+        <h2>Daily Task List</h2>
+         <div id="current-date"></div> 
+          <div id="task-container">
+          
+          <ul id="task-list"></ul>
+          <div id="add-task">
+            <input type="text" id="task-input" placeholder="Enter task">
+            <button id="add-task-btn">Add Task</button>
+            <h4 id="no-tasks-message">No Tasks! You're all caught up!</h4>
+          </div>
+        </div>
+        <canvas id="dailyTask" width="350" height="250"></canvas>
+      </div>
+
+      <div class="wrapper">
+        <header4Calendar>
+          <p class="current-date"></p>
+          <div class="icons">
+            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+            <span id="next" class="material-symbols-rounded">chevron_right</span>
+          </div>
+        </header4Calendar>
+        <div class="calendar">
+          <ul class="weeks">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+          <ul class="days"></ul>
+        </div>
+      </div>
+
+      <!-- Patient list section -->
+      <div id="patient-list">
+        <h2>Most Recent Patients</h2>
+        <ul>
+         <!-- Here originally was the test patient -->
+          <!-- Add more patient entries as needed -->
+        </ul>
+      </div>
+
+      <div id="appointment-list">
+        <h2>Upcoming Appointments</h2>
+        <ul>
+         
+        </ul>
+      </div>
+      
+  </div>
+
+    </body>
+  </html>
+ 
+</body>
+
+  <script src="userScript.js"></script>
+
+</html>
