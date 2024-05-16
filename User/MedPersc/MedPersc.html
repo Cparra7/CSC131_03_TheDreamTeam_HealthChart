@@ -1,1 +1,118 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Prescription Form</title>
+  <link rel="stylesheet" href="MPstyle.css"> <!-- Linking to external CSS file -->
+</head>
+    
+<header>
+    <span id="signedInAs">Signed In As: User</span>
+    <span id="signOut">Sign Out</span>
+</header>
+    
+<top-left></top-left>
+    
+  <body>
+    <h1>Medical Prescriptions</h1> <!-- Header for MedPersc Dashboard -->
+
+  <div id="sidebar">
+      <ul>
+        <li><a href="../Patients/Patients.html" id="Patients">Patients</a></li>
+        <li><a href="../Appointments/Appointments.html" id="Appointments">Appointments</a></li>
+        <li><a href="../MedPersc/MedPersc.html" id="MedPersc">Medical Records & Prescriptions</a></li>
+        <li><a href="../Settings/Settings.html" id="Settings">Settings</a></li>
+        <li><a href="../User Dashboard.html" id="BTDB">Back To Dashboard</a></li>
+      </ul>
+  </div>
+
+  <div id="content">
+      <div id="searchContainer">
+          <input type="text" id="searchInput" placeholder="Search Patients">
+          <button id="searchButton">Search</button> <!-- Add search button -->
+      </div>
+      <button id="newPrescriptionButton">New Prescription</button>
+  </div>
+
+  <!-- Patient List -->
+  <div id="patientList">
+      <h2>Prescription List</h2>
+      <ul>
+          <!-- Patient Items go here -->
+      </ul>
+  </div>
+      
+
+    <div id="popupForm" style="display: none;">
+        <h2 id="pformHeader">Prescription Form</h2>
+        <button id="exitButton">X</button> <!-- Exit button -->
+        <form id="patientForm">
+
+            <label for="patientSelection">Select Patient:</label><br>
+            <select id="patientSelection" name="patientSelection">
+                <option value="">Select a patient...</option>
+                <!-- Options will be dynamically added here -->
+            </select><br>
+            <label for="fullName">Patient Name:</label><br>
+            <input type="text" id="fullName" name="fullName" required><br>
+
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" id="dob" name="dob" required><br>
+          <p id="ageDisplay"></p>
+
+
+            <label for="email">Email address:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone number:</label><br>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender" required>
+              <option value="blank"></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="symptoms">Symptoms:</label><br>
+            <textarea id="symptoms" name="symptoms" rows="4" cols="50" required></textarea><br>
+
+            <label for="diagnosis">Diagnosis:</label><br>
+            <textarea id="diagnosis" name="diagnosis" rows="4" cols="50" required></textarea><br>
+
+            <label for="prescription">Prescription:</label><br>
+            <textarea id="prescription" name="prescription" rows="4" cols="50" required></textarea><br>
+
+          <label for="pharmacy">Select Pharmacy:</label><br>
+          <select id="pharmacy" name="pharmacy" required>
+              <option value="blank"></option>
+              <option value="Family Pharmacy">Family Pharmacy, 123 Main St, Sacramento, CA</option>
+             <option value="Friendly Pharmacy">Friendly Pharmacy, 123 J St, Sacramento, CA</option>
+              <option value="other">Other</option>
+            
+          </select><br>
+
+          <div id="otherPharmacy" style="display:none;">
+              <label for="otherPharmacyText">Enter Other Pharmacy:</label>
+              <input type="text" id="otherPharmacyText" name="otherPharmacyText">
+          </div>
+          
+            <label for="consent">Consent Button is used as a Signature:</label>
+            <input type="checkbox" id="consent" name="consent" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    
+  </div>
+    
+    <script src="MPscript.js"></script> 
+
+  </body>
+</html>
