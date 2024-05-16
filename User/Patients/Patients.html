@@ -1,1 +1,137 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients</title>
+    <link rel="stylesheet" href="Pstyle.css"> <!-- Linking to external CSS file -->
+</head>
+
+    <header>
+        <span id="signedInAs">Signed In As: User</span>
+        <span id="signOut">Sign Out</span>
+    </header>
+
+    <top-left></top-left>
+    
+<body>
+  <h1>Patient Dashboard</h1> <!-- Header for Patient Dashboard -->
+
+<div id="sidebar">
+    <ul>
+      <li><a href="../Patients/Patients.html" id="Patients">Patients</a></li>
+      <li><a href="../Appointments/Appointments.html" id="Appointments">Appointments</a></li>
+      <li><a href="../MedPersc/MedPersc.html" id="MedPersc">Medical Records & Prescriptions</a></li>
+      <li><a href="../Settings/Settings.html" id="Settings">Settings</a></li>
+      <li><a href="../User Dashboard.html" id="BTDB">Back To Dashboard</a></li>
+    </ul>
+</div>
+
+<div id="content">
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search Patients">
+        <button id="searchButton">Search</button> <!-- Add search button -->
+    </div>
+    <button id="newPatientButton">New Patient</button>
+</div>
+
+<!-- Patient List -->
+<div id="patientList">
+    <h2>Patients List</h2>
+    <ul>
+        <!-- <li>
+            <img src="placeholder.jpg" alt="Patient Image">
+            <div class="patient-info">
+                <p><strong>Full Name:</strong> John Doe</p>
+                <p><strong>Date of Birth:</strong> January 1, 1980</p>
+                <p><strong>Upcoming Appointment:</strong> March 20, 2024</p>
+              <button class="deleteButton">Delete</button>
+              <button class="popup-button">Patient Details</button>
+            </div>
+        </li> -->
+        <!-- Add more patient items as needed -->
+    </ul>
+</div>
+
+  <div id="popupForm" style="display: none;">
+      <h2 id="pformHeader">Patient Form</h2>
+      <button id="exitButton">X</button> <!-- Exit button -->
+      <form id="patientForm">
+        
+          <!-- General Patient Information -->
+          <h3>General Patient Information</h3>
+          <label for="fullName">Full Name:</label><br>
+          <input type="text" id="fullName" name="fullName"><br>
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" id="dob" name="dob"><br>
+          <label for="bloodGroup">Blood Group:</label><br>
+          <input type="text" id="bloodGroup" name="bloodGroup"><br>
+          <label for="rhFactor">RH Factor:</label><br>
+          <input type="text" id="rhFactor" name="rhFactor"><br>
+          <label for="maritalStatus">Marital Status:</label><br>
+          <input type="text" id="maritalStatus" name="maritalStatus"><br>
+          <label for="ageFormat">Age Format:</label><br>
+          <input type="text" id="ageFormat" name="ageFormat"><br>
+
+          <!-- Contact Info -->
+          <h3>Contact Info</h3>
+          <label for="phoneResidence">Phone Residence:</label><br>
+          <input type="text" id="phoneResidence" name="phoneResidence"><br>
+          <label for="mobilePhone">Mobile Phone:</label><br>
+          <input type="text" id="mobilePhone" name="mobilePhone"><br>
+          <label for="email">Email address:</label><br>
+          <input type="email" id="email" name="email"><br>
+
+          <!-- Emergency Contact -->
+          <h3>Emergency Contact</h3>
+          <label for="emergencyContactName">Name:</label><br>
+          <input type="text" id="emergencyContactName" name="emergencyContactName"><br>
+          <label for="emergencyContactPhone">Phone number:</label><br>
+          <input type="text" id="emergencyContactPhone" name="emergencyContactPhone"><br>
+
+          <!-- Health Conditions -->
+          <h3>Health Conditions</h3>
+          <label for="currentIllnesses">Current Illnesses:</label><br>
+          <textarea id="currentIllnesses" name="currentIllnesses"></textarea><br>
+          <label for="previousIllnesses">Previous Illnesses:</label><br>
+          <textarea id="previousIllnesses" name="previousIllnesses"></textarea><br>
+          <label for="specificAllergies">Specific Allergies:</label><br>
+          <textarea id="specificAllergies" name="specificAllergies"></textarea><br>
+
+          <!-- Medications -->
+          <h3>Medications</h3>
+          <label for="currentMedications">Current Medications:</label><br>
+          <textarea id="currentMedications" name="currentMedications"></textarea><br>
+          <label for="pastMedications">Past Medications:</label><br>
+          <textarea id="pastMedications" name="pastMedications"></textarea><br>
+
+          <!-- Analysis -->
+          <h3>Analysis</h3>
+          <label for="labReports">Lab Reports:</label><br>
+          <textarea id="labReports" name="labReports"></textarea><br>
+          <label for="radiologyVideos">Radiology Videos:</label><br>
+          <textarea id="radiologyVideos" name="radiologyVideos"></textarea><br>
+
+          
+
+          <input type="submit" value="Submit">
+      </form>
+  </div>
+
+  <div id="staffNotesPopup" style="display: none;">
+      <h2>Staff Notes</h2>
+      <button id="staffNotesExitButton">X</button> <!-- Exit button -->
+      <form id="staffNotesForm">
+          <h3>Staff Notes</h3>
+          <textarea id="staffNotesInput" rows="4" cols="50"></textarea>
+          <input type="button" id="staffNotesSaveButton" value="Save">
+      </form>
+  </div>
+</div>
+  
+<script src="Pscript.js"></script> <!-- Include Pscript.js file -->
+
+</body>
+</html>
+
 
