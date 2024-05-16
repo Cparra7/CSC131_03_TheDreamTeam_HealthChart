@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments</title>
+  <link rel="stylesheet" href="Astyle.css">
+</head>
+<body>
+
+<header>
+  <span id="signedInAs">Signed In As: User</span>
+  <span id="signOut">Sign Out</span>
+</header>
+
+<top-left></top-left>
+
+<h1>Appointments</h1>  
+
+<div id="sidebar">
+  <ul>
+    <li><a href="../Patients/Patients.html" class="menu-item" id="Patients">Patients</a></li>
+    <li><a href="../Appointments/Appointments.html" class="menu-item" id="Appointments">Appointments</a></li>
+    <li><a href="../MedPersc/MedPersc.html" class="menu-item" id="MedPersc">Medical Records & Prescriptions</a></li>
+    <li><a href="../Settings/Settings.html" class="menu-item" id="Settings">Settings</a></li>
+    <li><a href="../User Dashboard.html" class="menu-item" id="BTDB">Back To Dashboard</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="big-box">
+    <h2>APPOINTMENT</h2>
+    <form id="appointmentForm">
+      <div class="form-group">
+        <label for="appointmentPatientSelection">Select Patient:</label><br>
+        <select id="appointmentPatientSelection" name="appointmentPatientSelection">
+          <option value="">Select a patient...</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" placeholder="Enter patient name">
+      </div>
+      <div class="form-group">
+        <label for="appointmentDateTime">Appointment Date and Time:</label>
+        <input type="datetime-local" id="appointmentDateTime">
+      </div>
+      <div class="form-group">
+        <label for="appointmentReason">Appointment Reason:</label>
+        <select id="appointmentReason">
+          <option value="">Select a reason</option>
+          <option value="Illness">Illness</option>
+          <option value="Routine check up">Routine check up</option>
+          <option value="Lab/Blood work">Lab/Blood work</option>
+          <option value="Physical Injury">Physical Injury</option>
+          <option value="Optometry">Optometry </option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <button type="submit">Schedule</button> <!-- Changed button type to submit -->
+    </form>
+  </div>
+
+  <!-- New appointment display section -->
+  <div class="appointment-details">
+    <h3>Appointment Details</h3>
+    <div id="appointmentDisplay"></div>
+  </div>
+</div>
+
+<script src="Ascript.js"></script>
+</body>
+</html>
