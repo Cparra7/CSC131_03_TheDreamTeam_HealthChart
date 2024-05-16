@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="Settings.css"> <!-- Linking to external CSS file -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+</head>
+
+  <header>
+    <span id="signedInAs">Signed In As: User</span>
+    <span id="signOut">Sign Out</span>
+  </header>
+
+  <top-left></top-left>
+
+
+   <div id="sidebar">
+    <ul>
+     <li><a href="../Patients/Patients.html" id="Patients">Patients</a></li>
+     <li><a href="../Appointments/Appointments.html" id="Appointments">Appointments</a></li>
+     <li><a href="../MedPersc/MedPersc.html" id="MedPersc">Medical Records & Prescriptions</a></li>
+     <li><a href="../Settings/Settings.html" id="Settings">Settings</a></li>
+     <li><a href="../User Dashboard.html" id="BTDB">Back To Dashboard</a></li>
+   </ul>
+  </div> 
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="Settings.css"> <!-- Linking to external CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+  </head>
+
+
+  <body>
+
+    <h1>Settings</h1>
+
+        <div class="form-container">
+          <form action="update_profile.php" method="post">
+
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" value="User" readonly>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" placeholder="Enter your address">
+            </div>
+
+            <div class="form-group">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender">
+                <option value="blank"></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="language">Language Preference:</label>
+              <select id="language" name="language">
+                <option value="blank"></option>
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <!-- Add other supported languages here -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="timezone">Timezone:</label>
+              <select id="timezone" name="timezone">
+                <option value="pacific/midway">(UTC-11:00) Pacific/Midway</option>
+                <option value="pacific/honolulu">(UTC-10:00) Pacific/Honolulu</option>
+                <option value="america/los_angeles">(UTC-08:00) America/Los_Angeles</option>
+                <option value="america/denver">(UTC-07:00) America/Denver</option>
+                <option value="america/chicago">(UTC-06:00) America/Chicago</option>
+                <option value="america/new_york">(UTC-05:00) America/New_York</option>
+                <option value="america/toronto">(UTC-05:00) America/Toronto</option>
+                <option value="america/sao_paulo">(UTC-03:00) America/Sao_Paulo</option>
+                <option value="europe/london">(UTC+00:00) Europe/London</option>
+                <option value="europe/paris">(UTC+01:00) Europe/Paris</option>
+                <option value="europe/berlin">(UTC+01:00) Europe/Berlin</option>
+                <option value="asia/tokyo">(UTC+09:00) Asia/Tokyo</option>
+                <option value="australia/sydney">(UTC+10:00) Australia/Sydney</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="emergency_contact_name">Emergency Contact Name:</label>
+              <input type="text" id="emergency_contact_name" name="emergency_contact_name" placeholder="Enter emergency contact name">
+            </div>
+
+            <div class="form-group">
+              <label for="emergency_contact_phone">Emergency Contact Phone:</label>
+              <input type="tel" id="emergency_contact_phone" name="emergency_contact_phone" placeholder="Enter emergency contact phone">
+            </div>
+
+            <div class="form-group">
+              <label for="blood_type">Blood Type:</label>
+              <input type="text" id="blood_type" name="blood_type" placeholder="Enter your blood type">
+            </div>
+
+            <div class="form-group">
+              <label for="allergies">Allergies:</label>
+              <input type="text" id="allergies" name="allergies" placeholder="Enter any allergies">
+            </div>
+
+            <div class="form-group">
+              <label for="medical_conditions">Medical Conditions:</label>
+              <textarea id="medical_conditions" name="medical_conditions" placeholder="Enter any medical conditions"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="occupation">Occupation:</label>
+              <select id="occupation" name="occupation">
+                <option value="blank"></option>
+                <option value="doctor">Doctor</option>
+                <option value="nurse">Nurse</option>
+                <option value="pharmacist">Pharmacist</option>
+                <option value="paramedic">Paramedic</option>
+                <!-- Add other medical professions here -->
+                <option value="other">Other</option>
+              </select>
+            <div class="form-group">
+              <button type="submit">Update Profile</button>
+            </div>
+
+  </body>
+
+  <script src="Settings.js"></script>
+
+  </html>
+
+  
+  
+</body>
+
+  <script src="Settings.js"></script>
+
+</html>
