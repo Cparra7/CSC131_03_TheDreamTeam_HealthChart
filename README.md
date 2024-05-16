@@ -3,6 +3,9 @@ Health Chart Web Application - CSC131
 
 Welcome to the Health Chart Application repository! This application is designed to streamline health management processes, providing a user-friendly interface for both healthcare professionals and patients. Below is an overview of the application's features and functionalities:
 
+For Easy Temporary Server Configuration _if needed_ (use REPLIT):
+https://replit.com/@CristianParra5/Health-Chart
+
 Features:
 Login Page:
 
