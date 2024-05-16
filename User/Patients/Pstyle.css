@@ -1,0 +1,357 @@
+/* Your existing CSS styles */
+Patients, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #5f7b81; /* Light gray background */
+    font-family: Arial, sans-serif; /* Modern font */
+}
+
+h1 {
+    position: fixed;
+    top: 10px; /* Place the header at the top of the page */
+    left: 15px; /* Align the header to the left */
+    color: #fff;
+    text-align: left; /* Center-align the text */
+    margin: 0; /* Remove default margins */
+    z-index: 999; /* Ensure the header is above other content */
+    font-family: serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Align items with space between them */
+    position: fixed;
+    top: 0;
+    left: 200px;
+    padding: 30px;
+    background-color: #333;
+    width: calc(100% - 200px); /* Adjust width to accommodate sidebar */
+    box-shadow: 0px 0px 10px #333; /* Adding a subtle shadow */
+}
+
+#signedInAs {
+    color: #fff; /* Text color */
+    position: fixed; /* Positioning method */
+    top: 20px; /* Adjust top position */
+    left: 50%; /* Position at the horizontal center */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 999; /* Ensure the element is above other content */
+}
+
+#signOut {
+    background-color: #8b0000;  
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    position: fixed; /* Positioning method */
+    top: 15px; /* Adjust top position */
+    right: 20px; /* Adjust right position */
+    z-index: 999; /* Ensure the element is above other content */
+}
+
+#signOut:hover {
+    background-color: #cc0000;
+}
+
+top-left {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    background-color: #333;
+    padding: 30px;
+    width: 200px;
+    z-index: 998; /* Ensure the header is above other content */
+}
+
+
+/* Sidebar styles */
+
+#sidebar {
+    position: fixed;
+    margin-top: 30px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    overflow-y: auto; /* Add scrollbar if content exceeds sidebar height */
+    box-shadow: 0px 0px 10px #333; /* Adding a subtle shadow */
+}
+/* Sidebar styles */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    overflow-y: auto; /* Add scrollbar if content exceeds sidebar height */
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar ul li:hover {
+    background-color: #555;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Content styles */
+#content {
+    margin-top: 100px;
+    margin-left: 380px; /* Adjust this value according to your sidebar width */
+    margin-right: 180px;
+    padding: 20px;
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+/* Additional styles for search container and new patient button */
+#searchContainer {
+    margin-right: 20px; /* Add some margin to the right */
+}
+
+#searchInput {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+#newPatientButton {
+    padding: 10px 15px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#newPatientButton:hover {
+    background-color: #228B22;
+}
+
+/* Patient list styles */
+#patientList {
+    margin-top: 20px;
+    margin-left: 400px; /* Set left margin to auto to center horizontally */
+    margin-right: 200px;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    min-width: 150px;
+    width: auto; /* Set width to 100% minus the width of sidebar */
+}
+
+#patientList h2 {
+    margin-top: 0;
+    color: #333; /* Dark text color */
+}
+
+#patientList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#patientList li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+#patientList img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
+
+#patientList img:hover {
+    filter: brightness(90%); /* Reduce brightness to darken the image */
+}
+
+.patient-info {
+    overflow: hidden;
+}
+
+.patient-info p {
+    margin: 0;
+}
+
+/* Popup form styles */
+#popupForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* Light background color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    /* Adjust size to make it smaller */
+    width: 70%; /* Example width */
+    max-height: 80%; /* Example maximum height */
+    overflow-y: auto; /* Add vertical scroll when content exceeds height */
+}
+
+/* Staff Notes Popup */
+#staffNotesPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* Light background color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    /* Adjust size to make it smaller */
+    width: 70%; /* Example width */
+    max-height: 80%; /* Example maximum height */
+    overflow-y: auto; /* Add vertical scroll when content exceeds height */
+}
+
+/* Button styles */
+.button {
+    padding: 10px 15px;
+    background-color: #00008B; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Heading styles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: calc(100% - 12px); /* Adjust input width */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00008B; /* Button color */
+    color: #fff; /* Button text color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+#searchButton {
+    background-color: #006400; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    transition-duration: 0.4s; /* Transition duration */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#searchButton:hover {
+    background-color: #228B22; /* Darker green on hover */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.footer-content {
+    font-family: Arial, sans-serif;
+}
+
+.footer-content p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 5px;
+}
+
+.footer-disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
