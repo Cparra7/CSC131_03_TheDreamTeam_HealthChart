@@ -6,7 +6,7 @@ Welcome to the Health Chart Application repository! This application is designed
 For Easy Temporary Server Configuration _if needed_ (use REPLIT):
 https://replit.com/@CristianParra5/Health-Chart
 
-Features:
+
 Login Page:
 
 Username: User
